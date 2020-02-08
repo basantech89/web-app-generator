@@ -1,0 +1,16 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "description": "Generator for Web Apps",
+  "main": "index.js",
+  "scripts": {
+    "run": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Basant Soni",
+  "license": "ISC",
+  "dependencies": {
+    "enquirer": "^2.3.4",
+    "shelljs": "^0.8.3"
+  }
+}
