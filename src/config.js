@@ -1,2 +1,2 @@
-exports.GENERATOR_ROOT = `${__dirname}/generator-files/`;
-exports.PROJECT_ROOT = '/luv/repos/example/';
+exports.TEMPLATE_ROOT = `${__dirname}/template-files/`;
+exports.PROJECT_ROOT = '/luv/repos/pesto/take-home-projects/sql-editor/';

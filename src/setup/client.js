@@ -27,5 +27,17 @@ exports.setupClient = async () => {
 		]
 	}).run();
 
-	return { ui, ui_package, client_packages };
+	const theme = await new Toggle({
+		message: 'Do you want to use a theme switcher for client ?',
+		enabled: 'Yes',
+		disabled: 'No'
+	}).run();
+
+	const auth = await new Toggle({
+		message: 'Do you want to have authentication ?',
+		enabled: 'Yes',
+		disabled: 'No'
+	}).run();
+
+	return { ui, ui_package, client_packages, theme, auth };
 };

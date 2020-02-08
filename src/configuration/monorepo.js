@@ -1,9 +1,9 @@
-const fs = require("../../utils/files");
+const fs = require("../utils/files");
 const shell = require('shelljs');
-const { GENERATOR_ROOT, PROJECT_ROOT } = require("../../config");
+const { TEMPLATE_ROOT, PROJECT_ROOT } = require("../config");
 
 exports.configureMonoRepo = async (project) => {
-	let data = await fs.readFile(`${GENERATOR_ROOT}package.json`);
+	let data = await fs.readFile(`${TEMPLATE_ROOT}package.json`);
 	data = JSON.parse(data);
 	data.description = project.description;
 	data.name = project.name;

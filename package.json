@@ -4,7 +4,7 @@
   "description": "Generator for Web Apps",
   "main": "index.js",
   "scripts": {
-    "run": "node src/app.js",
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Basant Soni",
