@@ -1,4 +1,4 @@
-import config from "../config";
+import config from "../../config";
 
 export const authenticateUser = async (path, username, password) => {
 	try {

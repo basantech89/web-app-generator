@@ -15,12 +15,15 @@ const runGenerator = async () => {
 		shell.exec(`sed -i "$ a exports.PROJECT_ROOT = '${PROJECT_ROOT}';" config.js`); // append PROJECT_ROOT to config.js
 		if (monoRepo) {
 			const { ui, ui_package, client_packages, theme, auth } = await setupClient();
-			const server_packages = await setupServer();
+			const { packages: server_packages, dbms } = await setupServer();
 			await configureProject();
 			await configureMonoRepo(project);
 			await configureClient(ui, ui_package, client_packages, theme, auth);
-			await configureServer(server_packages);
+			await configureServer(server_packages, dbms);
 		} else {
+			const { ui, ui_package, client_packages, theme, auth } = await setupClient();
+			await configureProject();
+			await configureClient(ui, ui_package, client_packages, theme, auth);
 		}
 	} catch (e) {
 		console.log(e);
